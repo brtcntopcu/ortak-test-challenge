@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "currencies": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "symbol": {
+                  "type": "string"
+                },
+                "max_supply": {
+                  "type": "integer"
+                },
+                "circulating_supply": {
+                  "type": "integer"
+                },
+                "total_supply": {
+                  "type": "integer"
+                },
+                "cmc_rank": {
+                  "type": "integer"
+                },
+                "volume_24h": {
+                  "type": "number"
+                },
+                "volume_change_24h": {
+                  "type": "number"
+                },
+                "market_cap": {
+                  "type": "number"
+                },
+                "market_cap_dominance": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "name",
+                "symbol",
+                "max_supply",
+                "circulating_supply",
+                "total_supply",
+                "cmc_rank",
+                "volume_24h",
+                "volume_change_24h",
+                "market_cap",
+                "market_cap_dominance"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "currencies"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "data"
+  ]
+}
